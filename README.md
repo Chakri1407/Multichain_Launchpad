@@ -142,12 +142,13 @@ multichain-launchpad/
 ## 🖥️ Screenshots
 ### Main Dashboard
 Landing page with wallet connection options for both Polygon and Solana chains
-
+![1.](https://github.com/Chakri1407/Multichain_Launchpad/blob/master/ss/HomePage.png)
 ### Project Creation
 Form for creating a new project on the selected blockchain.
-
+![2.](https://github.com/Chakri1407/Multichain_Launchpad/blob/master/ss/CreatePage.png)
 ### Contract Tests
 All tests passing for the Launchpad smart contract
+![3.](https://github.com/Chakri1407/Multichain_Launchpad/blob/master/ss/test.png)
 
 
 
