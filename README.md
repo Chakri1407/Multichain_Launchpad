@@ -20,6 +20,8 @@ A decentralized fundraising platform that operates across multiple blockchains, 
 - MetaMask extension for EVM chain interactions
 - Phantom wallet for Solana interactions
 - Test tokens for Polygon Amoy testnet and Solana Devnet
+- WSL Ubuntu for Solana development (Windows users)
+- Anchor framework for Solana program development
 
 ## 🔧 Installation
 
@@ -43,6 +45,13 @@ cp .env.example .env
 
 Then edit the .env file with your configuration details.
 
+``` bash 
+PRIVATE_KEY = ""
+RPC_URL = ""
+Amoy_API_Key = ""
+DEPLOYED_CONTRACT_ADDRESS = ""
+```
+
 4. Start the development server:
 
 ```bash
@@ -65,6 +74,28 @@ The Solana program leverages Anchor framework to provide similar functionality:
 - Contribution tracking with secure fund custody
 - Fund distribution upon successful campaign completion
 - Refund mechanism for unsuccessful campaigns
+
+### Solana Development Setup
+For Windows users, it's recommended to use WSL (Windows Subsystem for Linux) with Ubuntu for Solana development:
+
+1. Install WSL Ubuntu from the Microsoft Store or via PowerShell
+2. Set up the Anchor development environment in WSL:
+```bash
+# Install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source $HOME/.cargo/env
+
+# Install Solana CLI
+sh -c "$(curl -sSfL https://release.solana.com/v1.16.0/install)"
+
+# Install Anchor
+npm install -g @coral-xyz/anchor-cli
+```
+
+3. Configure Solana for Devnet:
+```bash
+solana config set --url devnet
+``` 
 
 🏗️ Project Structure
 ```
@@ -107,6 +138,16 @@ multichain-launchpad/
 
 - Successful projects: Creators withdraw funds after deadline
 - Unsuccessful projects: Contributors claim refunds
+
+## 🖥️ Screenshots
+### Main Dashboard
+Landing page with wallet connection options for both Polygon and Solana chains
+
+### Project Creation
+Form for creating a new project on the selected blockchain.
+
+### Contract Tests
+All tests passing for the Launchpad smart contract
 
 
 
